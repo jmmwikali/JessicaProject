@@ -1,0 +1,148 @@
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 5px rgb(201, 193, 74) solid;
+    display: inline-block;
+}
+.body{
+    background: linear-gradient(rgb(166, 194, 255), rgb(120, 94, 170));
+}
+b{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#rotate:hover{
+    background-color: rgb(113, 80, 174);
+    transform: rotate(90deg);
+    transition: 0.5s;
+    height: 22px;
+    border-radius: 9px;
+}
+
+.line:hover{
+    color: rgb(45, 16, 100);
+}
+.line{
+  position: relative;
+  color: rgb(120, 94, 170);
+  display: inline-block;
+}
+
+.line::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(45, 16, 100);
+  transition: width 0.3s ease; 
+}
+
+.line:hover::after{
+  width: 100%; 
+}
+.box a{
+  display: block;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(45, 16, 100);
+  text-decoration: none;
+  position: relative;
+  transition: 
+    background-color 0.25s ease,
+    padding-left 0.25s ease,
+    color 0.25s ease;
+    gap: 12px;
+    border-radius: 12px; 
+}
+.box a:hover {
+  color: rgb(45, 16, 100);
+  background-color: rgb(148, 115, 209);
+  padding-left: 10px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+}
+.box a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background:rgb(45, 16, 100);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease;
+  border-radius: 12px;
+}
+
+.box a:hover::before {
+  transform: scaleY(1);
+}
+.offcanvas{
+    width: 250px;
+    background: linear-gradient(rgb(187, 167, 225), rgb(113, 83, 168), rgb(109, 70, 180));
+}
+.navigation{
+  background-color: rgb(245, 246, 248);
+}
+.button{
+ background: linear-gradient(rgb(187, 167, 225), rgb(113, 83, 168), rgb(109, 70, 180));
+}
+.gradient-text {
+  background: linear-gradient(90deg, rgb(146, 103, 225), rgb(96, 56, 170), rgb(87, 35, 185));
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; /* makes text show the gradient */
+  background-clip: text; /* for other browsers that support it */
+  color: transparent;
+}
+@keyframes fly-in {
+  0% {
+    transform: translateX(100%); /* start at the right side of the slide */
+    opacity: 0;                  /* start invisible */
+  }
+  100% {
+    transform: translateX(0);    /* end at its original position */
+    opacity: 1;                  /* fully visible */
+  }
+}
+  .carousel-caption {
+    animation: fly-in 0.8s ease-out; /* takes 0.8s. Smooth fly-in */
+  }
+
+.cardseffect:hover{
+  transform: translateY(-8px);
+  transition: 0.6s;
+}
+.cardseffect{
+  transition: transform 0.6s ease;
+}
+.section2cards{
+  background: linear-gradient(rgb(120, 94, 170)), rgb(102, 0, 146);
+}
+#top{
+    background-color: rgb(35, 24, 62);
+    height: 50px;
+}
+.underline{
+    display: inline-block;
+    border-bottom: 3px rgb(186, 108, 254) solid;
+    padding: 7px;
+    padding-left: 2px;
+}
+#bottom{
+    background-color: rgb(30, 18, 58);
+    height: 350px;
+    padding-top: 20px;
+}
+.links{
+    line-height: 30px;
+    text-decoration: none;
+    color: white;
+}
+.links:hover{
+  color: rgb(209, 118, 255);
+}
+.body2{
+  background: linear-gradient(rgb(141, 137, 254), rgb(88, 88, 250));
+}
+
