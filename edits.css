@@ -80,7 +80,7 @@ b{
 }
 .offcanvas{
     width: 250px;
-    background: linear-gradient(rgb(187, 167, 225), rgb(113, 83, 168), rgb(109, 70, 180));
+    background: linear-gradient(rgb(166, 194, 255), rgb(120, 94, 170));
 }
 .navigation{
   background-color: rgb(245, 246, 248);
@@ -90,6 +90,13 @@ b{
 }
 .gradient-text {
   background: linear-gradient(90deg, rgb(146, 103, 225), rgb(96, 56, 170), rgb(87, 35, 185));
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; /* makes text show the gradient */
+  background-clip: text; /* for other browsers that support it */
+  color: transparent;
+}
+.gradient-text2 {
+  background: linear-gradient(90deg, rgb(59, 31, 111), rgb(0, 0, 0));
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; /* makes text show the gradient */
   background-clip: text; /* for other browsers that support it */
@@ -145,4 +152,17 @@ b{
 .body2{
   background: linear-gradient(rgb(141, 137, 254), rgb(88, 88, 250));
 }
+.sectionbackground{
+  background: url(images/image2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-position: center;
+  opacity: 50%;
+}
+.body2 img:hover{
+  transform: scale(1.1);
+  transition: 0.9s;
+}
+
 
