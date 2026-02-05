@@ -1,14 +1,13 @@
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-bottom: 5px rgb(201, 193, 74) solid;
-    display: inline-block;
-}
+/* Applying a smoothed out background color */
 .body{
     background: linear-gradient(rgb(166, 194, 255), rgb(120, 94, 170));
 }
+
 b{
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
+/* Adding a rotating animation to the cancel button in the offcanvas */
 #rotate:hover{
     background-color: rgb(113, 80, 174);
     transform: rotate(90deg);
@@ -17,6 +16,7 @@ b{
     border-radius: 9px;
 }
 
+/* Underline of the navbar content */
 .line:hover{
     color: rgb(45, 16, 100);
 }
@@ -40,6 +40,7 @@ b{
 .line:hover::after{
   width: 100%; 
 }
+/* Styling the links in the offcanvas */
 .box a{
   display: block;
   padding: 15px 0;
@@ -78,16 +79,23 @@ b{
 .box a:hover::before {
   transform: scaleY(1);
 }
+
+/* offcanvas feautures */
 .offcanvas{
     width: 250px;
     background: linear-gradient(rgb(166, 194, 255), rgb(120, 94, 170));
 }
+
+/* navbar background color */
 .navigation{
   background-color: rgb(245, 246, 248);
 }
+
 .button{
  background: linear-gradient(rgb(187, 167, 225), rgb(113, 83, 168), rgb(109, 70, 180));
 }
+
+/* adding smoothed out colors for the text */
 .gradient-text {
   background: linear-gradient(90deg, rgb(146, 103, 225), rgb(96, 56, 170), rgb(87, 35, 185));
   -webkit-background-clip: text; 
@@ -95,6 +103,7 @@ b{
   background-clip: text; /* for other browsers that support it */
   color: transparent;
 }
+
 .gradient-text2 {
   background: linear-gradient(90deg, rgb(59, 31, 111), rgb(0, 0, 0));
   -webkit-background-clip: text; 
@@ -102,6 +111,8 @@ b{
   background-clip: text; /* for other browsers that support it */
   color: transparent;
 }
+
+/* Fly-in animation for carousel captions */
 @keyframes fly-in {
   0% {
     transform: translateX(100%); /* start at the right side of the slide */
@@ -116,6 +127,7 @@ b{
     animation: fly-in 0.8s ease-out; /* takes 0.8s. Smooth fly-in */
   }
 
+  /* Cards hover effect */
 .cardseffect:hover{
   transform: translateY(-8px);
   transition: 0.6s;
@@ -123,23 +135,33 @@ b{
 .cardseffect{
   transition: transform 0.6s ease;
 }
+
+/* index: section two card bacground color */
 .section2cards{
-  background: linear-gradient(rgb(120, 94, 170)), rgb(102, 0, 146);
+  background: linear-gradient(rgb(120, 94, 170), rgb(102, 0, 146));
 }
+
+/* Footer top section */
 #top{
     background-color: rgb(35, 24, 62);
     height: 50px;
 }
+
+/* footer heading underline */
 .underline{
     display: inline-block;
     border-bottom: 3px rgb(186, 108, 254) solid;
     padding: 7px;
     padding-left: 2px;
 }
+
+/* Bottom section of the footer */
 #bottom{
     background-color: rgb(30, 18, 58);
     padding-top: 20px;
 }
+
+/* Links in footer */
 .links{
     line-height: 30px;
     text-decoration: none;
@@ -151,6 +173,8 @@ b{
 .body2{
   background: linear-gradient(rgb(141, 137, 254), rgb(88, 88, 250));
 }
+
+/* About: First section */
 .sectionbackground{
   background: url(images/image2.jpg);
   background-size: 100%;
@@ -159,9 +183,235 @@ b{
   background-position: center;
   opacity: 50%;
 }
+
+/* Effect of images in the projects file */
 .body2 img:hover{
   transform: scale(1.1);
   transition: 0.9s;
 }
+
+/* Responsive adjustments for small screens (phones) */
+@media (max-width: 576px) {
+  .carousel-caption {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .carousel-caption .display-1 {
+    font-size: 2rem !important; 
+    line-height: 1.05 !important;
+  }
+
+  .carousel-caption p {
+    display: none; /* hide paragraph text on small screens */
+    font-size: 1.05rem !important; 
+  }
+
+  /* Increase button size and tap area on phones */
+  .carousel-caption .btn {
+    font-size: 1.05rem !important;
+    padding: 0.55rem 1rem !important;
+    border-radius: 15px !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .navbar-brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navigation {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sectionbackground {
+    height: 220px;
+    background-size: cover;
+  }
+
+  .w-75, .w-50 {
+    width: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding: .5rem 0;
+    font-size: 1rem;
+  }
+
+  .offcanvas {
+    width: 50vw !important; /* half the viewport width on phones */
+    max-width: 50vw !important;
+    min-width: 240px; 
+  }
+
+  /* Make carousel images occupy 3/4 of the viewport height on phones minus 50px */
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: calc(75vh - 50px);
+    min-height: 270px; 
+  }
+
+  .carousel-item img,
+  .carousel .d-block.w-100 {
+    height: calc(75vh - 50px) !important;
+    max-height: calc(75vh - 50px) !important;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    top: 1rem; 
+  }
+
+  /* Contact: center the form card on phones */
+  .contact-form .col-lg-6:first-child .card {
+    width: calc(100% - 2rem) !important;
+    max-width: 520px !important;
+    margin: 0 auto 1rem !important;
+    padding: 1rem !important;
+  }
+
+  /* About (Section Three): add spacing between image and vision card and center the card on phones */
+  .about-vision .col-lg-8 img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin-bottom: 1rem !important; /* spacing between image and card */
+  }
+
+  .about-vision .col-lg-4 .card {
+    width: calc(100% - 2rem) !important;
+    max-width: 520px !important;
+    margin: 1rem auto !important; /* centers and adds top spacing */
+    padding: 1rem !important;
+  }
+
+  /* Section Three: center content and reduce font sizes on phones */
+  .section-three {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .section-three .planning-icon {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-three .display-2 {
+    font-size: 1.6rem !important;
+    line-height: 1.1 !important;
+    display: block;
+  }
+
+  .section-three .planner-img {
+    width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .section-three .section-three-text,
+  .section-three .section-three-intro {
+    text-align: center !important;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .section-three p {
+    font-size: 0.95rem !important;
+  }
+
+  .section-five {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .section-five .display-4 {
+    font-size: 1.4rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .section-five h2.display-5 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-five .card {
+    width: 100% !important;
+    margin: 0 auto 1rem !important;
+    padding: 1rem !important;
+  }
+
+  .section-five p,
+  .section-five label,
+  .section-five .h-100,
+  .section-five input,
+  .section-five .w-75,
+  .section-five .w-50 {
+    width: 100% !important;
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 420px;
+  }
+
+  /* Submit buttons kept centered and compact */
+  .section-five input[type="submit"] {
+    display: block !important;
+    margin: 0.6rem auto !important;
+    width: auto !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  .section-five .card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Footer: apply ms-5 (left margin) on phones */
+  #bottom .col-lg-3:not(:first-child) > * {
+    margin-left: 3rem !important; 
+  }
+
+  /* Stack the first three feature cards on phones */
+  .feature-cards .col-lg-4,
+  .feature-cards .w-25 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-bottom: 1rem; 
+  }
+
+  .feature-cards .col-lg-4:last-child,
+  .feature-cards .w-25:last-child {
+    margin-bottom: 0; 
+  }
+}
+
 
 
